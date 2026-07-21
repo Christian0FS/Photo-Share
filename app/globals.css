@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --bg: #f4ede4;
+  --surface: #fff4e8;
+  --border: #c5a685;
+  --text: #3d2b20;
+  --muted: #7c5a3f;
+  --primary: #a16f4b;
+  --accent: #7b5e3f;
+  --button: #6d4a2f;
+  --button-hover: #50341f;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: #1b1712;
+  --surface: #2f261f;
+  --border: #5b493c;
+  --text: #f2e8d8;
+  --muted: #c8b69e;
+  --primary: #d0a87b;
+  --accent: #a2774c;
+  --button: #8c653f;
+  --button-hover: #704b2c;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+::selection {
+  background: rgba(161, 111, 75, 0.25);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
