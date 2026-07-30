@@ -1,11 +1,7 @@
 import "./globals.css";
-import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import ThemeProvider from "@/components/ThemeProvider";
-
-const PageTransition = dynamic(() => import("@/components/PageTransition"), {
-  ssr: false,
-});
+import ClientPageTransition from "@/components/ClientPageTransition";
 
 export const metadata = {
   title: "PhotoShare",
@@ -19,7 +15,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider />
         <Navbar />
         <main className="max-w-3xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-          <PageTransition>{children}</PageTransition>
+          <ClientPageTransition>{children}</ClientPageTransition>
         </main>
       </body>
     </html>
